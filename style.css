@@ -9,11 +9,11 @@
 
 body {
   background-color: #CEECEC;
-  margin: 100px;
+  margin: 20px;
 }
 
 .weather_title {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .search_input {
