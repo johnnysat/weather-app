@@ -10,6 +10,7 @@
 </head>
 <body>
   <header>
+    <h1 class="display-1 text-center">Previsão do Tempo</h1>
   </header>
 
   <body>
@@ -17,16 +18,20 @@
     <main>
       <div class="input-group mb-3">
           <input type="text" class="form-control" id="search_input" placeholder="Pesquise sua cidade" aria-describedby="button-addon2" required>
-          <button class="btn btn-outline-secondary search_button" type="button" id="button-addon2">Button</button>
+          <button class="btn btn-outline-secondary search_button" type="button" id="button-addon2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </button>
       </div>
 
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3 card_weather" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="/images/cloudy.png" class="img-fluid rounded-start" id="img_temp" alt="...">
+            <img src="/images/cloudy.png" class="img-fluid rounded-start m-1" id="img_temp" alt="...">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
+            <div class="card-body m-4">
               <h5 class="card-title fs-1 text-center" id="city_name">São Paulo, BR</h5>
               <p class="card-text fs-2 text-center" id="city_temp">22º C</p>
               <p class="card-text text-center"><small class="text-muted">Last updated 3 mins ago</small></p>

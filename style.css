@@ -41,7 +41,6 @@ input {
 .card_weather {
   border-radius: 10px;
   width: 100%;
-  height: 150px;
   background-color: #fff;
   padding: 10px;
   margin-bottom: 20px;
@@ -63,10 +62,28 @@ footer {
   background-color: #fff;
   border-radius: 10px;
   width: 100%;
+  border: 1px solid #BFDCDC;
+}
+
+footer p {
+  margin: 0;
 }
 
 footer a {
   text-decoration: none;
   color: #000;
   font-weight: 700;
+}
+
+@media (min-width: 1100px) {
+
+  body {
+    margin: 0 20%;
+  }
+
+  .card_weather{
+    margin-top: 50px;
+    max-width: 100% !important;
+  }
+
 }
