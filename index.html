@@ -18,19 +18,19 @@
     
     <main>
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary search_button" type="button" id="button-addon2">Button</button>
+          <input type="text" class="form-control" id="search_input" placeholder="Pesquise sua cidade" aria-describedby="button-addon2" required>
+          <button class="btn btn-outline-secondary search_button" type="button" id="button-addon2">Button</button>
       </div>
 
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="/images/cloudy.png" class="img-fluid rounded-start" alt="...">
+            <img src="/images/cloudy.png" class="img-fluid rounded-start" id="img_temp" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title fs-1 text-center">São Paulo, BR</h5>
-              <p class="card-text fs-2 text-center">22º C</p>
+              <h5 class="card-title fs-1 text-center" id="city_name">São Paulo, BR</h5>
+              <p class="card-text fs-2 text-center" id="city_temp">22º C</p>
               <p class="card-text text-center"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>

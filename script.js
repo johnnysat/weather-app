@@ -7,11 +7,13 @@ const api = {
 
 const city = document.querySelector('.city_name');
 const temp = document.querySelector('.city_temp');
+const imgTemp = document.querySelector('#img_temp');
 const input = document.querySelector('#search_input');
+const searchButton = document.querySelector('.btn');
 
-input.addEventListener('submit', function(e) {
-    console.log(input.value);
-    e.preventDefault();
+
+searchButton.addEventListener('click', function() {
+  console.log(input.value)
 })
 
 
