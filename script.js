@@ -5,15 +5,15 @@ const api = {
   lang: 'pt_br',
 }
 
-const city = document.querySelector('.city_name');
-const temp = document.querySelector('.city_temp');
+const city = document.querySelector('#city_name');
+const temp = document.querySelector('#city_temp');
 const imgTemp = document.querySelector('#img_temp');
 const input = document.querySelector('#search_input');
 const searchButton = document.querySelector('.btn');
 
 
 searchButton.addEventListener('click', function() {
-  console.log(input.value);
+  city.innerHTML = input.value;
 })
 
 input.addEventListener('keypress', enter);
