@@ -7,6 +7,6 @@ para previsão do tempo, onde será possível pesquisar pelo nome da cidade e te
 [x]Layout Desktop<br>
 [x]Responsividade<br>
 [x]Capturar INPUT com JS.<br>
-[]Integrar API Weather<br>
+[X]Integrar API Weather<br>
 []Fazer com que INPUT se relacione com a API.<br>
 []Implementar busca em mais de uma cidade para comparações.<br>
