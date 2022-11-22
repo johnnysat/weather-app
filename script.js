@@ -39,21 +39,6 @@ function enter(event) {
   }
 };
 
-function searchResults(city){
-  fetch(`${api.base}weather?q=${city}$lang=${api.lang}&units=${api.units}&APPID=${api.key}` )
-    .then(response => {
-      if(!response.ok){
-        throw new Erro(`http error: status ${response.status}`)
-      }
-      return response.json();
-    })
-    .catch(error => {
-      alert(error.message)
-    })
-    .then(response => {
-      displayResults(response)
-    })
-};
 
 
 
