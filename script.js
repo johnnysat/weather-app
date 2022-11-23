@@ -5,6 +5,7 @@ const api = {
 
 const cityName = document.querySelector('#city_name');
 const temp = document.querySelector('#city_temp');
+const tempUmidade = document.querySelector('#temp_umidade')
 const imgTemp = document.querySelector('#img_temp');
 const input = document.querySelector('#search_input');
 const searchButton = document.querySelector('.btn');
@@ -23,9 +24,11 @@ const showWeatherData = async (city) => {
   const data = await getWeatherData(city);
   
   cityName.innerHTML = `${data.name}, ${data.sys.country}`;
-  temp.innerHTML = parseInt(data.main.temp);
+  temp.innerHTML = `${parseInt(data.main.temp)} ${'ºC'}`;
+  tempUmidade.innerHTML = data.main.humidity;
 }
 
+//Funcionalidade com a pesquisa
 searchButton.addEventListener('click', async(e) => {
   e.preventDefault();
   const city = input.value;
