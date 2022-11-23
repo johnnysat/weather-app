@@ -26,6 +26,7 @@ const showWeatherData = async (city) => {
   cityName.innerHTML = `${data.name}, ${data.sys.country}`;
   temp.innerHTML = `${parseInt(data.main.temp)} ${'ºC'}`;
   tempUmidade.innerHTML = `${data.main.humidity}%`;
+  imgTemp.setAttribute('src', `/icons/${data.weather[0].icon}.png`)
 }
 
 //Funcionalidade com a pesquisa
