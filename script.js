@@ -1,41 +1,43 @@
 const api = {
   key: '9420c587001998ce8f388bc3675e0525',
   base: 'https://api.openweathermap.org/data/2.5/',
-  units: 'metric',
-  lang: 'pt_br',
 }
 
-const city = document.querySelector('#city_name');
+const cityName = document.querySelector('#city_name');
 const temp = document.querySelector('#city_temp');
 const imgTemp = document.querySelector('#img_temp');
 const input = document.querySelector('#search_input');
 const searchButton = document.querySelector('.btn');
 
-function searchResults(city){
-  fetch(`${api.base}weather?q=${city}$lang=${api.lang}&units=${api.units}&APPID=${api.key}` )
-    .then(response => {
-      if(!response.ok){
-        throw new Erro(`http error: status ${response.status}`)
-      }
-      return response.json();
-    })
-    .catch(error => {
-      alert(error.message)
-    })
-    .then(response => {
-      displayResults(response)
-    })
+//Capturando API
+const getWeatherData = async (city) => {
+  const apiWeatherURL = `${api.base}weather?q=${city}&units=metric&appid=${api.key}&lang=pt_br`
+  
+  const res = await fetch(apiWeatherURL);
+  const data = await res.json();
+
+  return data;
 };
 
-searchButton.addEventListener('click', function() {
-  searchResults(input.value);
+const showWeatherData = async (city) => {
+  const data = await getWeatherData(city);
+  
+  cityName.innerHTML = `${data.name}, ${data.sys.country}`;
+  temp.innerHTML = parseInt(data.main.temp);
+}
+
+searchButton.addEventListener('click', async(e) => {
+  e.preventDefault();
+  const city = input.value;
+  showWeatherData(city);
 })
 
 input.addEventListener('keypress', enter);
 function enter(event) {
   key = event.keyCode;
   if (key === 13) {
-    searchResults(input.value);
+    const city = input.value;
+    showWeatherData(city);
   }
 };
 
