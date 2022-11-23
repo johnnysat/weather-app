@@ -86,4 +86,7 @@ footer a {
     max-width: 100% !important;
   }
 
+  img {
+    margin-left: 50px;
+  }
 }
