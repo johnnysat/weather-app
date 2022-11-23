@@ -25,7 +25,7 @@ const showWeatherData = async (city) => {
   
   cityName.innerHTML = `${data.name}, ${data.sys.country}`;
   temp.innerHTML = `${parseInt(data.main.temp)} ${'ºC'}`;
-  tempUmidade.innerHTML = data.main.humidity;
+  tempUmidade.innerHTML = `${data.main.humidity}%`;
 }
 
 //Funcionalidade com a pesquisa
