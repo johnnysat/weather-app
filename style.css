@@ -90,4 +90,14 @@ footer a {
     margin-top: 50px;
     margin-left: 30%;
   }
+
+  .other_citys .card_weather{
+    width: 47%;
+    column-gap: 10px;
+  }
+
+  .other_citys .card_weather:first-child {
+    margin-right: 5%;
+  }
+
 }

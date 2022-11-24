@@ -1,6 +1,7 @@
 const api = {
   key: '9420c587001998ce8f388bc3675e0525',
   base: 'https://api.openweathermap.org/data/2.5/',
+  lang: 'pt-br'
 }
 
 const cityName = document.querySelector('#city_name');
@@ -12,13 +13,14 @@ const searchButton = document.querySelector('.btn');
 
 //Capturando API
 const getWeatherData = async (city) => {
-  const apiWeatherURL = `${api.base}weather?q=${city}&units=metric&appid=${api.key}&lang=pt_br`
+  const apiWeatherURL = `${api.base}weather?q=${city}&units=metric&appid=${api.key}&${api.lang}`
   
   const res = await fetch(apiWeatherURL);
   const data = await res.json();
 
   return data;
 };
+
 
 const showWeatherData = async (city) => {
   const data = await getWeatherData(city);
