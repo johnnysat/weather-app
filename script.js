@@ -44,7 +44,3 @@ function enter(event) {
     showWeatherData(city);
   }
 };
-
-
-
-
