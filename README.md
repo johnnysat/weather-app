@@ -16,5 +16,5 @@ para previsão do tempo, onde será possível pesquisar pelo nome da cidade e te
 
 ## Imagem do Projeto
 <p align="center">
-<img src="./images/projetoimg.JPG" alt="Imagem do Projeto" style="height: 100px; width:100px;"/>
+<img src="./images/projetoimg.JPG" alt="Imagem do Projeto">
 </p>
